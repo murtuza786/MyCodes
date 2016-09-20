@@ -20,7 +20,7 @@ trigger opportunity_triggers on Opportunity (before insert,before update,after i
        }
        if (Trigger.isUpdate)
        {
-           OpportunityClasses.oppNotiEmailAlert(Trigger.new);
+           OpportunityClasses.oppNotiEmailAlertUpdate(Trigger.newmap,Trigger.oldmap);
        }       
     }           
 }
